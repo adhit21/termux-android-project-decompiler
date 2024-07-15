@@ -36,7 +36,8 @@ home_folder="$ROOT"
 dir_out="jdk"
 dir_work="$ROOT/jdk"
 
-echo -e "${CYAN}Pilih opsi:${NC}"
+echo -e "${CYAN}Select an option:${NC}"
+echo
 echo -e "${YELLOW}1) CFR [a fast decompiler]${NC}"
 echo -e "${YELLOW}2) FERNFLOWER [first decompiler]${NC}"
 echo -e "${YELLOW}3) JADX [optimized]${NC}"
@@ -64,7 +65,7 @@ echo
 
 APK_FOLDER="$ROOT/sdcard/decompiler/apk"
 
-# Menyimpan daftar nama file APK ke variabel
+#
 list_file=($(ls $APK_FOLDER/*.apk | xargs -n 1 basename))
 
 valid_file_choice=false
@@ -75,10 +76,10 @@ while [ "$valid_file_choice" = false ]; do
         echo -e "${YELLOW}$((i+1)). ${list_file[$i]}${NC}"
     done
 
-    # Meminta pengguna untuk memilih nomor file
+    # 
     read -p "Enter the file number you want to select: " choice
 
-    # Memeriksa apakah pilihan valid
+    # 
     if [[ $choice -gt 0 && $choice -le ${#list_file[@]} ]]; then
         selected_file=${list_file[$((choice-1))]}
         valid_file_choice=true
@@ -91,18 +92,18 @@ done
 
 nama_apk="$selected_file"
 
-# Lokasi penuh APK
+# 
 apk_path="$APK_FOLDER/$nama_apk"
 
-# Extract the base name of the apk file without extension
+# 
 apk_name=$(basename "$nama_apk" .apk)
 
-# Define the output directory based on the decompiler and apk name
+# 
 output_dir="$ROOT/sdcard/decompiler/output/$decompiler/$apk_name"
 
-# Create the output directory if it does not exist
+# 
 mkdir -p "$output_dir"
 
-# Jalankan decompiler
+# 
 java -jar ./ThianTools.jar -decompile $decompiler "$apk_path" "$output_dir"
 
