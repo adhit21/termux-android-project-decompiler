@@ -2,6 +2,9 @@
 
 #
 chmod +x thian.sh
+pkg install ncurses-utils
+mkdir $ROOT/sdcard/decompiler/apk
+mkdir $ROOT/sdcard/decompiler/output
 
 #Setup
 shopt -s expand_aliases
