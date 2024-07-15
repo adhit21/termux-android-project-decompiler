@@ -25,4 +25,7 @@ bash thian.sh
 
 
 # Note
-- work on arch64 devices
+- make sure to put the apk file in the "decompiler/apk/" folder
+-
+-  work on arch64 devices
+- 
