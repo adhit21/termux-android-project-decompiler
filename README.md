@@ -5,6 +5,11 @@
 termux-setup-storage
 ```
 - give a permission
+# cloning
+```
+git clone https://github.com/adhit21/termux-android-project-decompiler.git
+cd termux-android-project-decompiler
+```
 **and**
 
 ```
