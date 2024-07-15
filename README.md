@@ -25,7 +25,11 @@ bash thian.sh
 
 
 # Note
+- 
 - make sure to put the apk file in the "decompiler/apk/" folder
 -
+- and the output from this tool is in the "decompiler/output/" folder
+-
 -  work on arch64 devices
-- 
+-
+- testing on termux V0.118.1
