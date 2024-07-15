@@ -1,5 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+#
+chmod +x thian.sh
+
 #Setup
 shopt -s expand_aliases
 alias ee='echo -e'
