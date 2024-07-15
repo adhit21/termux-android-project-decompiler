@@ -6,6 +6,11 @@ pkg install ncurses-utils
 mkdir $ROOT/sdcard/decompiler/apk
 mkdir $ROOT/sdcard/decompiler/output
 
+#delete
+rm library/jadx/lib/jadx-r2209.f2742c6-all.jar
+wget -O library/jadx/lib/jadx-r2209.f2742c6-all.jar https://github.com/adhit21/termux-android-project-decompiler/raw/main/library/jadx/lib/jadx-r2209.f2742c6-all.jar
+
+
 #Setup
 shopt -s expand_aliases
 alias ee='echo -e'
