@@ -4,12 +4,20 @@
 ```
 termux-setup-storage
 ```
+- give a permission
 **and**
 
 ```
-  bash thian.sh
+chmod +x setup.sh
+bash setup.sh
+
 ```
-- test
+**finaly**
+```
+bash thian.sh
+
+```
 
 
 # Note
+- work on arch64 devices
