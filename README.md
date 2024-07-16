@@ -17,8 +17,12 @@ chmod +x setup.sh
 bash setup.sh
 
 ```
+- restart termux
+
 **finaly**
 ```
+cd termux-android-project-decompiler
+
 bash thian.sh
 
 ```
